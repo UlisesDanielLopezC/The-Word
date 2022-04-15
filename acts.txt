@@ -1,0 +1,22 @@
+- - ELECCION
+Tener diferentes teclado en /keyboards y ver como importarlos
+o
+Usar Vue.js y tener renderizado condicional para cargar teclados
+
+Sistema de puntos/monedas (primero sin localstorage, luego vemos)
+
+Cambiar el diseño
+Cambiar los colores base (gray/green/yellow)
+Añadir background default
+Arreglar tamaño del teclado (cuadrados perfectos)
+Poner comentarios en el código
+
+Modo español sin acentos (luego vemos para acentos)
+
+Programar la tiendita
+
+Partida personalizada
+
+Modo historia
+
+Funcional > bonito > funcional > bonito
