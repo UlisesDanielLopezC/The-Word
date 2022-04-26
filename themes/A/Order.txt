@@ -1,0 +1,8 @@
+Arboles - Movimiento Lento <- x1
+Flotantes - 3 frames arriba/abajo
+Nubes oscuras - Movimiento Lento <- x1.6
+Nubes claras - Movimiento Lento <- x1.3
+Ondulamiento - 6 frames color rotatorio
+Reloj - Estatico
+Sol - Estatico
+Fondo - Estatico

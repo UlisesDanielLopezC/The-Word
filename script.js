@@ -1,14 +1,26 @@
-import { ENG_words } from "./languages/lang_ENG.js";
+import { ENG_words_5 } from "./languages/lang_ENG_5.js";
+import { ESP_words_5 } from "./languages/lang_ESP_5.js";
+
+let ENG_5 = ENG_words_5
+let ESP_5 = ESP_words_5
+
+//La variable que define el lenguaje <DE LA PALABRA A ADIVINAR>
+let LANG = ENG_5
+
+//La variable que define los temas
 
 const intentos = 6;
 let int_restantes = intentos;
 let intentoActual = [];
 let letraSig = 0;
 let longPalabra = 5;
-let palabraCorrecta = ENG_words[Math.floor(Math.random() * ENG_words.length)]
+let palabraCorrecta = LANG[Math.floor(Math.random() * LANG.length)]
 
 console.log(palabraCorrecta)
 
+let coins = 0;
+
+//Se obtiene el tablero y se crean [intentos] intentos de [longPalabra] letras
 function initTabla() {
     let tabla = document.getElementById("tablero");
 
@@ -26,6 +38,7 @@ function initTabla() {
     }
 }
 
+//Se ejecuta la inicializacion de la tabla
 initTabla()
 
 document.addEventListener("keyup", (e) => {
@@ -90,7 +103,7 @@ function verificar () {
         return
     }
 
-    if (!ENG_words.includes(int_palabra)) {
+    if (!LANG.includes(int_palabra)) {
         toastr.error("La palabra no esta en la lista!")
         return
     }
@@ -103,17 +116,18 @@ function verificar () {
         let posicionLetra = int_correcto.indexOf(intentoActual[i])
         // is letter in the correct guess
         if (posicionLetra === -1) {
-            colorLetra = 'grey'
+            // shade NO CONTIENE
+            colorLetra = '#D3D3D3'
         } else {
             // now, letter is definitely in word
             // if letter index and right guess index are the same
             // letter is in the right position 
             if (intentoActual[i] === int_correcto[i]) {
-                // shade green 
-                colorLetra = 'green'
+                // shade POSICION CORRECTA
+                colorLetra = '#3CB371'
             } else {
-                // shade box yellow
-                colorLetra = 'yellow'
+                // shade POSICION INCORRECTA
+                colorLetra = '#FFD700'
             }
 
             int_correcto[posicionLetra] = "#"
@@ -131,6 +145,11 @@ function verificar () {
 
     if (int_palabra === palabraCorrecta) {
         toastr.success("Felicitaciones!")
+
+        //Partidas (3x7-N)
+        coins = coins + 3 * int_restantes
+        console.log(coins)
+
         int_restantes = 0
         return
     } else {
@@ -149,11 +168,11 @@ function colorearTeclado(letra, colorLetra) {
     for (const elem of document.getElementsByClassName("tecla")) {
         if (elem.textContent === letra) {
             let color_prev = elem.style.backgroundColor
-            if (color_prev === 'green') {
+            if (color_prev === '#3CB371') {
                 return
             } 
 
-            if (color_prev === 'yellow' && colorLetra !== 'green') {
+            if (color_prev === '#FFD700' && colorLetra !== '#3CB371') {
                 return
             }
 
@@ -197,4 +216,3 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
 });
-

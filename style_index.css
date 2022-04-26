@@ -1,0 +1,109 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-image: url("/themes/A/Bluesteel_BG_Anim.gif");
+    background-repeat: no-repeat;
+    background-color: #3E265F;
+    background-position-x: 50%;
+
+}
+
+/* .cont {
+    display: flex;
+    justify-content: center;
+    background-color: #3E265F;
+} */
+
+h1 {
+    color: #fffdca;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    line-height: 50px;
+    font-size: 52px;
+    -webkit-text-stroke: 1px #3E265F;
+    /*text-decoration: underline wavy #ddbdaa;*/
+}
+
+#titleAndOptions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+#PXconfig, #PXstore{
+    height: 100%;
+}
+
+#toCoins{
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.selectTheme{
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    -webkit-text-stroke: 1px #3E265F;
+}
+option{
+    text-align: center;
+}
+
+#selectGamemode {
+    list-style: none;
+    padding: 10px;
+    margin-top: 35px;
+    
+    text-align: center;
+}
+#selectGamemode a {
+    font-size: 30px;
+    color: #fffdca;
+    text-decoration: none;
+    -webkit-text-stroke: 2px #3E265F;
+}
+#selectGamemode li {
+    margin-bottom: 60px;
+}
+.link {
+    display: inline-block;
+    margin-block: 2px;
+    position: relative;
+}
+.link::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #3E265F;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+.link:hover::after {
+    transform: scaleX(1);
+}
+
+/*Responsividad*/
+@media (max-width: 780px) {
+    #PXtitle {
+        text-decoration: none;
+        font-size: 44px;
+        position: absolute;
+        margin-top: 55px;
+    }
+    #PXcoins {
+        margin-top: 68px;
+        padding: 0;
+    }
+    #selectGamemode a {
+        font-size: 26px;
+        color: #fff;
+        text-decoration: none;
+        -webkit-text-stroke: 2px #3E265F;
+    }
+}

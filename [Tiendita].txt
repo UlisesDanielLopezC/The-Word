@@ -1,0 +1,6 @@
+Implementar con vue.js
+
+Crear icono de monedas / puntos
+Crear icono para abrir la tienda
+Tener diferentes barras en el menú (temas / fuentes / colores / powerups)
+

@@ -1,6 +1,41 @@
-- - ELECCION
-Tener diferentes teclado en /keyboards y ver como importarlos
-o
+[-] Hacer dibujo del background (POR LAYERS)
+[-] Colocar iconos en un index.html
+[-] Acomodar los iconos mas o menos
+- Poner el background en movimiento
+[-] Crear botones para los modos de juego
+[-] Poner los botones abajo del titulo
+[-] Verificar pantalla principal
+- - - - - - -
+[-] Conectar pantalla del modo CLASICO
+- Comprobar diseño de ambas pantallas
+- - - - - - -
+- Perfeccionar colores del juego
+
+
+PUNTOS:
+(I) - Primer partida (7xN) / Post partidas (3xN)
+[-] - Tener una variable que almacene las monedas
+[-] - Poder obtener 7xN al final de las partidas
+[ ] - Sumar ganancias a las monedas actuales 
+[ ] - Poder guardar el valor localmente
+
+DISEÑO:
+(I) - Se debe tener diseño para COIN / TROPHY / CONFIG / STORE / BG
+[-] - Investigar como cambiar estos elementos a partir de un boton que active script
+[ ] - Cambiar el boton por una imagen MINI BG
+[ ] - Guardar la paleta de colores en un TXT
+[ ] - Investigar como cambiar los valores de los colores en el CSS
+[ ] - Poder guardar la eleccion localmente
+
+MENUS:
+[ ] - Hablar con Jairo sobre como crear un menu que oscurezca lo demas
+[ ] - Hacer menu para la tienda de temas y powerups
+[ ] - Mover las imagenes MINI BG al menu
+[ ] - Crear boton para cambiar el teclado
+[ ] - Hacer menu para configuraciones de teclado
+[ ] - Mover el boton al menu
+
+
 Usar Vue.js y tener renderizado condicional para cargar teclados
 
 Sistema de puntos/monedas (primero sin localstorage, luego vemos)

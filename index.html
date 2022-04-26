@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wordle</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
-
-<body>
-    <h1>The Wordle</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://freewordle.org/images/wordle-game-icon-512.png">
+        <title>THE WORDLE</title>
     
-    <div id="tablero"></div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style_index.css">
+    
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    </head>
+<body>
+    <div class="cont">
+        <div class="child">
+            <div id="titleAndOptions">
+                <img id="PXconfig" src="/themes/A/Config_Bluesteel.png">
+                <img id="PXtitle" src="/themes/A/Title_Bluesteel.png">
+                <img id="PXstore" src="/themes/A/Store_Bluesteel.png">
+            </div>
+    
+            <div id="toCoins">
+                <img id="PXcoins" src="/themes/A/Coin_Bluesteel.png">
+            </div>
+    
+            <ul id="selectGamemode">
+                <li>
+                    <a href="/g_classic.html" class="link">CLASSIC MODE</a>
+                </li>
+                <li>
+                    <a href="/" class="link">VERSUS MODE</a>
+                </li>
+                <li>
+                    <a href="/" class="link">CO-OP MODE</a>
+                </li>
+            </ul>
+            
+            <select class="selectLanguage">
+                <option value="engV">English</option>
+                <option value="espV">Español</option>
+            </select>
 
-    <div id="teclado">
-        <div class="teclado-fila1">
-            <button class="tecla">q</button>
-            <button class="tecla">w</button>
-            <button class="tecla">e</button>
-            <button class="tecla">r</button>
-            <button class="tecla">t</button>
-            <button class="tecla">y</button>
-            <button class="tecla">u</button>
-            <button class="tecla">i</button>
-            <button class="tecla">o</button>
-            <button class="tecla">p</button>
-        </div>
-        <div class="teclado-fila2">
-            <button class="tecla">a</button>
-            <button class="tecla">s</button>
-            <button class="tecla">d</button>
-            <button class="tecla">f</button>
-            <button class="tecla">g</button>
-            <button class="tecla">h</button>
-            <button class="tecla">j</button>
-            <button class="tecla">k</button>
-            <button class="tecla">l</button>
-        </div>
-        <div class="teclado-fila3">
-            <button class="tecla">Del</button>
-            <button class="tecla">z</button>
-            <button class="tecla">x</button>
-            <button class="tecla">c</button>
-            <button class="tecla">v</button>
-            <button class="tecla">b</button>
-            <button class="tecla">n</button>
-            <button class="tecla">m</button>
-            <button class="tecla">Enter</button>
+            <select class="selectTheme">
+                <option value="theme-A">Lunar</option>
+                <option value="theme-B">Door</option>
+            </select>
+
         </div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="./script.js" type="module"></script>
-</body>
 
+    <script src="./script_index.js" type="module"></script>
+</body>
 </html>
