@@ -1,0 +1,22 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "wordle game with modifiers",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UlisesDanielLopezC/The-Word.git"
+  },
+  "author": "FUM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UlisesDanielLopezC/The-Word/issues"
+  },
+  "homepage": "https://github.com/UlisesDanielLopezC/The-Word#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}

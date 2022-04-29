@@ -144,6 +144,7 @@ function verificar () {
     }
 
     if (int_palabra === palabraCorrecta) {
+        borrarTeclado()
         toastr.success("Felicitaciones!")
 
         //Partidas (3x7-N)
@@ -158,10 +159,16 @@ function verificar () {
         letraSig = 0;
 
         if (int_restantes === 0) {
+            borrarTeclado()
             toastr.error("No mas intentos!")
             toastr.info(`La palabra correcta era: "${palabraCorrecta}"`)
         }
     }
+}
+
+function borrarTeclado(){
+    var teclado = document.getElementById("teclado");
+    teclado.parentNode.removeChild(teclado);
 }
 
 function colorearTeclado(letra, colorLetra) {
