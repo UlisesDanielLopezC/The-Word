@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="https://freewordle.org/images/wordle-game-icon-512.png">
-        <title>THE WORDLE</title>
+        <link rel="icon" href="/images/Wordelta_Icon.png">
+        <title> WORDELTA</title>
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,41 +16,78 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </head>
 <body>
-    <div class="cont">
+    <div class="cont" id="blur">
+        
         <div class="child">
             <div id="titleAndOptions">
-                <img id="PXconfig" src="/images/Icon_Config.png">
-                <img id="PXtitle" src="/images/Icon_Title.png">
-                <img id="PXcolthe" src="/images/Icon_ColorThemes.png">
+                <button class="config-btn" onclick="toggle('config-popup')"></button>
+                <img id="PXtitle" src="/images/Title_Reduced.png">
+                <button class="theme-btn" onclick="toggle('theme-popup')"></button>
             </div>
     
             <div id="toCoins">
-                <img id="PXstore" src="/images/Icon_Store.png">
+                <button class="store-btn" onclick="toggle('store-popup')"></button>
                 <img id="PXcoins" src="/images/Icon_Coin.png">
+                <h1 id="coins">x0</h1>
             </div>
     
             <ul id="selectGamemode">
-                <img id="gclassic" src="/images/Button_Classic_Static.png">
-                <img id="gversus" src="/images/Button_Versus_Static.png">
-                <img id="gcoop" src="/images/Button_Coop_Static.png">
+                <div id="GameModes">
+                    <img id="gclassic" src="/images/Button_Classic_Static.png">
+                    <img id="gversus" src="/images/Button_Versus_Static.png">
+                    <img id="gcoop" src="/images/Button_Coop_Static.png">
+                </div>
                 <li>
                     <a id="enterClick" href="/"><img id="PXenter" src="/images/Button_Enter_Static.png"></a>
                 </li>
             </ul>
             
-            <select class="selectLanguage">
-                <option value="engV">English</option>
-                <option value="espV">Español</option>
-            </select>
-
-            <select class="selectTheme">
-                <option value="theme-A">Lunar</option>
-                <option value="theme-B">Door</option>
-            </select>
-
         </div>
     </div>
 
+    <div id="config-popup">
+        <div class="top-pup">
+            <h2>Settings</h2>
+            <img id="PXclose" src="/images/Icon_Close.gif" onclick="toggle('config-popup')">
+        </div>
+        <p>Select language: </p>
+        <select class="selectLanguage">
+            <option value="engV">English</option>
+            <option value="espV">Español</option>
+        </select>
+    </div>
+
+    <div id="theme-popup">
+        <div class="top-pup">
+            <h2>Themes</h2>
+            <img id="PXclose" src="/images/Icon_Close.gif" onclick="toggle('theme-popup')">
+        </div>
+        <p>Select theme: </p>
+        <select class="selectTheme">
+            <option value="Forest-Gray">Gray</option>
+            <option value="Forest-Blue">Blue</option>
+            <option value="Forest-Purple">Purple</option>
+            <option value="Forest-Green">Green</option>
+            <option value="Forest-Red">Red</option>
+        </select>
+    </div>
+
+    <div id="store-popup">
+        <div class="top-pup">
+            <h2>Store</h2>
+            <img id="PXclose" src="/images/Icon_Close.gif" onclick="toggle('store-popup')">
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+        function toggle(id){
+            // var blur = document.getElementById('blur');
+            // blur.classList.toggle('active');
+            var popup = document.getElementById(id);
+            popup.classList.toggle('active');
+        }
+    </script>
     <script src="./script_index.js" type="module"></script>
 </body>
 </html>

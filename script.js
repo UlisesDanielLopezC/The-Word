@@ -1,13 +1,37 @@
 import { ENG_words_5 } from "./languages/lang_ENG_5.js";
 import { ESP_words_5 } from "./languages/lang_ESP_5.js";
 
-let ENG_5 = ENG_words_5
-let ESP_5 = ESP_words_5
+import { ENG_check, ENG_lose } from "./languages/endlines_ENG.js";
+import { ENG_win_6, ENG_win_4_5, ENG_win_2_3, ENG_win_1 } from "./languages/endlines_ENG.js";
 
-//La variable que define el lenguaje <DE LA PALABRA A ADIVINAR>
-let LANG = ENG_5
+import { ESP_check, ESP_lose } from "./languages/endlines_ESP.js";
+import { ESP_win_6, ESP_win_4_5, ESP_win_2_3, ESP_win_1 } from "./languages/endlines_ESP.js";
 
-//La variable que define los temas
+//La variable que define el lenguaje del juego y resultados
+let LANG = ENG_words_5
+let CHECK = ENG_check
+let LOSE = ENG_lose
+let WIN6 = ENG_win_6
+let WIN45 = ENG_win_4_5
+let WIN23 = ENG_win_2_3
+let WIN1 = ENG_win_1
+let langref = "https://www.wordreference.com/definition/"
+
+let lenguaje = localStorage.getItem('lang');
+if(lenguaje == null){
+    localStorage.setItem('lang', 'engV')
+}
+
+if(lenguaje == 'espV'){
+    LANG = ESP_words_5
+    CHECK = ESP_check
+    LOSE = ESP_lose
+    WIN6 = ESP_win_6
+    WIN45 = ESP_win_4_5
+    WIN23 = ESP_win_2_3
+    WIN1 = ESP_win_1
+    langref = "https://www.wordreference.com/definicion/"
+}
 
 const intentos = 6;
 let int_restantes = intentos;
@@ -18,7 +42,19 @@ let palabraCorrecta = LANG[Math.floor(Math.random() * LANG.length)]
 
 console.log(palabraCorrecta)
 
-let coins = 0;
+//Recuperación de monedas
+let coins = localStorage.getItem('coins');
+if(coins == null){
+    localStorage.setItem('coins', 0)
+}
+
+//Recuperación de tema actual
+let tema = localStorage.getItem('tema')
+if(tema !== null){
+    document.body.style.backgroundImage="url('/themes/" + tema + "/" + tema + ".gif')";
+}else{
+    localStorage.setItem('tema', 'Forest-Gray')
+}
 
 //Se obtiene el tablero y se crean [intentos] intentos de [longPalabra] letras
 function initTabla() {
@@ -124,10 +160,10 @@ function verificar () {
             // letter is in the right position 
             if (intentoActual[i] === int_correcto[i]) {
                 // shade POSICION CORRECTA
-                colorLetra = '#3CB371'
+                colorLetra = 'aqua'
             } else {
                 // shade POSICION INCORRECTA
-                colorLetra = '#FFD700'
+                colorLetra = 'orange'
             }
 
             int_correcto[posicionLetra] = "#"
@@ -144,26 +180,44 @@ function verificar () {
     }
 
     if (int_palabra === palabraCorrecta) {
-        borrarTeclado()
+        borrarTeclado();
+        if(int_restantes > 5){
+            document.getElementById("winlose").textContent=WIN1[Math.floor(Math.random() * WIN1.length)];
+        }else if(int_restantes > 3){
+            document.getElementById("winlose").textContent=WIN23[Math.floor(Math.random() * WIN23.length)];
+        }else if(int_restantes > 1){
+            document.getElementById("winlose").textContent=WIN45[Math.floor(Math.random() * WIN45.length)];
+        }else{
+            document.getElementById("winlose").textContent=WIN6[Math.floor(Math.random() * WIN6.length)];
+        }
+        crearLink();
         toastr.success("Felicitaciones!")
 
         //Partidas (3x7-N)
-        coins = coins + 3 * int_restantes
-        console.log(coins)
+        let newcoins = parseInt(coins) + 3 * int_restantes
+        localStorage.setItem('coins', newcoins)
+        console.log(newcoins)
 
         int_restantes = 0
         return
+
     } else {
         int_restantes -= 1;
         intentoActual = [];
         letraSig = 0;
 
         if (int_restantes === 0) {
-            borrarTeclado()
-            toastr.error("No mas intentos!")
+            borrarTeclado();
+            document.getElementById("winlose").textContent=LOSE[Math.floor(Math.random() * LOSE.length)];
+            crearLink();
             toastr.info(`La palabra correcta era: "${palabraCorrecta}"`)
         }
     }
+}
+
+function crearLink(){
+    document.getElementById("reference").href=langref.concat(palabraCorrecta);
+    document.getElementById("checkword").textContent=CHECK[Math.floor(Math.random() * CHECK.length)];
 }
 
 function borrarTeclado(){

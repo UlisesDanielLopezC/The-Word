@@ -1,7 +1,39 @@
 const selectTheme = document.querySelector('.selectTheme');
+const selectLang = document.querySelector('.selectLanguage');
 const gm_classic = document.querySelector('#gclassic');
 const gm_versus = document.querySelector('#gversus');
 const gm_coop = document.querySelector('#gcoop');
+
+//Recuperación de lenguaje
+var lenguaje = localStorage.getItem('lang')
+if(lenguaje !== null){
+    console.log(lenguaje)
+    selectLang.value = lenguaje;
+}else{
+    console.log('ES NULO')
+    localStorage.setItem('lang', 'engV')
+}
+
+//Recuperación de cantidad de monedas
+var monedas = localStorage.getItem('coins')
+if(monedas !== null){
+    console.log(monedas)
+    document.getElementById("coins").textContent = 'x' + monedas
+}else{
+    console.log('ES NULO')
+    localStorage.setItem('coins', 0)
+}
+
+//Recuperación de tema seleccionado
+var tema = localStorage.getItem('tema')
+if(tema !== null){
+    console.log(tema)
+    selectTheme.value = tema;
+    document.body.style.backgroundImage="url('/themes/" + tema + "/" + tema + ".gif')";
+}else{
+    console.log('ES NULO')
+    localStorage.setItem('tema', 'Forest-Gray')
+}
 
 function to_enter(){
     document.getElementById("PXenter").src="/images/Button_Enter_Active.gif";
@@ -47,20 +79,12 @@ gm_versus.addEventListener("click", to_versus);
 gm_coop.addEventListener("click", to_coop)
 
 selectTheme.addEventListener('change', (event) => {
-    //console.log(event.target.value);
-    if (event.target.value == "theme-A"){
-        //document.getElementById("PXtitle").src="/themes/A/Title_Bluesteel.png";
-        //document.getElementById("PXconfig").src="/themes/A/Config_Bluesteel.png";
-        //document.getElementById("PXstore").src="/themes/A/Store_Bluesteel.png";
-        //document.getElementById("PXcoins").src="/themes/A/Coin_Bluesteel.png";
-        document.body.style.backgroundImage="url('/themes/A/Bluesteel_BG_Anim.gif')";
+    document.body.style.backgroundImage="url('/themes/" + event.target.value + "/" + event.target.value + ".gif')";
+    console.log(event.target.value)
+    localStorage.setItem('tema', event.target.value)
+});
 
-    } else if (event.target.value == "theme-B"){
-        //document.getElementById("PXtitle").src="/themes/B/Title_Salomon.png";
-        //document.getElementById("PXconfig").src="/themes/B/Config_Salomon.png";
-        //document.getElementById("PXstore").src="/themes/B/Store_Salomon.png";
-        //document.getElementById("PXcoins").src="/themes/B/Coin_Salomon.png";
-        document.body.style.backgroundImage="url('/themes/B/Salomon_BG_Anim.gif')";
-    }
-    
+selectLang.addEventListener('change', (event) => {
+    console.log(event.target.value)
+    localStorage.setItem('lang', event.target.value)
 });
