@@ -4,6 +4,8 @@ const gm_classic = document.querySelector('#gclassic');
 const gm_versus = document.querySelector('#gversus');
 const gm_coop = document.querySelector('#gcoop');
 
+//var socket = io.connect('http://localhost:3000');
+
 //Recuperación de lenguaje
 var lenguaje = localStorage.getItem('lang')
 if(lenguaje !== null){

@@ -30,7 +30,7 @@ if(lenguaje == 'espV'){
     WIN45 = ESP_win_4_5
     WIN23 = ESP_win_2_3
     WIN1 = ESP_win_1
-    langref = "https://www.wordreference.com/definicion/"
+    langref = "https://dle.rae.es/"
 }
 
 const intentos = 6;
@@ -75,7 +75,7 @@ function initTabla() {
 }
 
 //Se ejecuta la inicializacion de la tabla
-initTabla()
+initTabla();
 
 document.addEventListener("keyup", (e) => {
     if (int_restantes === 0) {
@@ -135,12 +135,12 @@ function verificar () {
     }
 
     if (int_palabra.length != 5) {
-        toastr.error("No hay suficientes letras!")
+        toastr.error("Not enough letters!")
         return
     }
 
     if (!LANG.includes(int_palabra)) {
-        toastr.error("La palabra no esta en la lista!")
+        toastr.error("Not listed word!")
         return
     }
     
@@ -191,12 +191,14 @@ function verificar () {
             document.getElementById("winlose").textContent=WIN6[Math.floor(Math.random() * WIN6.length)];
         }
         crearLink();
-        toastr.success("Felicitaciones!")
+        document.getElementById("winlose").style.color = 'aqua'
 
         //Partidas (3x7-N)
         let newcoins = parseInt(coins) + 3 * int_restantes
         localStorage.setItem('coins', newcoins)
         console.log(newcoins)
+        let woncoins = 3 * int_restantes
+        toastr.success("+" + woncoins + " coins!")
 
         int_restantes = 0
         return
@@ -211,6 +213,7 @@ function verificar () {
             document.getElementById("winlose").textContent=LOSE[Math.floor(Math.random() * LOSE.length)];
             crearLink();
             toastr.info(`La palabra correcta era: "${palabraCorrecta}"`)
+            document.getElementById("winlose").style.color = 'lightsalmon'
         }
     }
 }

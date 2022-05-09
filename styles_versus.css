@@ -1,0 +1,102 @@
+body {
+    background-image: url("/themes/Forest-Gray/Forest-Gray.gif");
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-color: #1F1F1F;
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#tablero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caja-letras {
+    border: 3px solid #1F1F1F;
+    margin: 2px;
+    line-height: normal;
+    color: #fff;
+    -webkit-text-stroke: #1F1F1F 1px;
+    font-size: 2.3rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    background-color: #ffffff69;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.relleno-caja {
+    border: 3px solid #1F1F1F;
+}
+
+.fila-letras {
+    display: flex;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - -*/
+
+#teclado {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+#teclado div {
+    display: flex;
+}
+
+.teclado-fila2 {
+    margin: 0.5rem 0;
+}
+
+#teclado .tecla {
+    width: 40px;
+    border: 3px solid #1F1F1F;
+    background-color: #fff;
+}
+#teclado .tecla:hover {
+    background: #000000;
+    color: #fff;
+    border-color: #fff;
+}
+
+#teclado .tecla-2 {
+    width: fit-content;
+    border-radius: 0px;
+    border: 3px solid #3E265F;
+}
+#teclado .tecla-2:hover {
+    background: #868686;
+    color: #fff;
+    border-color: #fff;
+}
+
+.tecla, .tecla-2 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}

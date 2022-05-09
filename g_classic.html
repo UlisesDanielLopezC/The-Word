@@ -19,7 +19,9 @@
 
 <body>
     <div class="top">
-        <a href="/index.html"><img id="title" src="/images/Title_Icon.png"></a>
+        <a onclick="confirmar()" style="cursor:pointer;">
+            <img id="title" src="/images/Title_Icon.png">
+        </a>
         <!-- <img onclick="location.reload()" id="icono1"
             src="https://www.freeiconspng.com/thumbs/reload-icon/arrow-refresh-reload-icon-29.png"> -->
     </div>
@@ -69,6 +71,21 @@
         <a id="reference" href="/" target="_blank" rel="noopener noreferrer"><h1 id="checkword"></h1></a>
         <!-- <h2 id="rar">B</h2> -->
     </div>
+
+    <script>
+        //Añadir método confirm() para confirmar regresar al index.html
+        function confirmar() {
+            let text = "Are you sure you want to go back?";
+            if (confirm(text) == true) {
+                //Si damos "Aceptar", vamos al index
+                window.location.href = "index.html"
+            } 
+            else {
+                //Si no, nos quedamos donde mismo
+                window.location.origin;
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

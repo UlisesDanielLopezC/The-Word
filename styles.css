@@ -1,5 +1,5 @@
 body {
-    background-image: url("/themes/A/Bluesteel_BG_Anim.gif");
+    background-image: url("/themes/Forest-Gray/Forest-Gray.gif");
     background-position-x: 50%;
     background-repeat: no-repeat;
     background-color: #1F1F1F;
@@ -19,7 +19,7 @@ a:visited {
 }
 
 a:hover {
-    color: aqua;
+    color: palevioletred;
     -webkit-text-stroke: #000000 1px;
 }
 

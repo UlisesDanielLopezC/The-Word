@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WORDELTA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_rooms.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="cont" id="blur">
+
+        <div class="child">
+            <div id="titleAndOptions">
+                <a onclick="confirmar()" style="cursor:pointer;">
+                    <img id="PXtitle" src="/images/Title_Icon.png">
+                </a>
+            </div>
+
+            <div id="nameAndRooms">
+                <div class="all">
+                    <label for="username">Name:</label>
+                    <input type="text" id="username" name="username">
+                    <button id="sendName">+</button>
+
+                    <table>
+                        <tr>
+                            <th>Check</th>
+                            <th>Room Number</th>
+                            <th>Players</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check" class="room" value="1" onclick="onlyOne(this)"></td>
+                            <td>1</td>
+                            <td>0/6</td>
+                            <td>Waiting</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check" class="room" value="2" onclick="onlyOne(this)"></td>
+                            <td>2</td>
+                            <td>0/6</td>
+                            <td>Waiting</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('check')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            })
+        }
+    </script>
+    <script>
+        //Añadir método confirm() para confirmar regresar al index.html
+        function confirmar() {
+            let text = "Are you sure you want to go back?";
+            if (confirm(text) == true) {
+                //Si damos "Aceptar", vamos al index
+                window.location.href = "index.html"
+            } 
+            else {
+                //Si no, nos quedamos donde mismo
+                window.location.origin;
+            }
+        }
+    </script>
+    <script src="./script_lobby_versus.js" type="module"></script>
+</body>
+
+</html>
