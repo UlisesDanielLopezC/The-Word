@@ -116,18 +116,18 @@ button {
     border-color: #fff;
 }
 
-#teclado .tecla-2 {
+#teclado #tecla-2 {
     width: fit-content;
     border-radius: 0px;
     border: 3px solid #3E265F;
 }
-#teclado .tecla-2:hover {
+#teclado #tecla-2:hover {
     background: #868686;
     color: #fff;
     border-color: #fff;
 }
 
-.tecla, .tecla-2 {
+.tecla, #tecla-2 {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.5rem;
