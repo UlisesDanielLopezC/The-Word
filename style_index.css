@@ -3,6 +3,8 @@ body {
     background-repeat: no-repeat;
     background-color: #1F1F1F;
     background-position-x: 50%;
+    background: center center / cover no-repeat fixed;
+    
     font-family: 'Press Start 2P', cursive;  
 }
 
