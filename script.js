@@ -88,7 +88,7 @@ document.addEventListener("keyup", (e) => {
         return
     }
 
-    if (pressedKey === "Enter") {
+    if (pressedKey === "+>") {
         verificar()
         return
     }
@@ -254,7 +254,7 @@ document.getElementById("teclado").addEventListener("click", (e) => {
     }
     let key = target.textContent
 
-    if (key === "Del") {
+    if (key === "<-") {
         key = "Backspace"
     } 
 
