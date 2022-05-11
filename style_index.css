@@ -161,6 +161,8 @@ option{
 }
 
 /*Responsividad*/
-/* @media (max-width: 600px) {
-
-} */
+@media screen and (max-width: 500px){
+    #config-popup, #store-popup, #theme-popup {
+        width: 300px;
+    }
+}
