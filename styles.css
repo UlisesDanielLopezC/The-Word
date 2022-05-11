@@ -45,6 +45,7 @@ button {
 
 #reference{
     height: 0px;
+    text-decoration: 5px underline #000;
 }
 
 #winlose{
@@ -138,6 +139,9 @@ button {
 }
 
 @media screen and (max-width: 500px){
+    #results{
+        font-size: 12px;
+    }
     button{
         font-size: 2px;
     }
