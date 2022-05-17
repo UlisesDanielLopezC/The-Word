@@ -36,9 +36,11 @@ El despliegue en Heroku se logra creando un repositorio en heroku y subiendo tod
 (En desarrollo) Tienda: Se debe disponer de una tienda donde se puedan usar las monedas ganadas en las partidas clásicas para la compra de temas o power-ups.
 
 (Funcional) Temas: Se debe poder tener un menu para personalizar el tema (set de colores) que quieras visualizar en tu pantalla de juego.
+
 ![image](https://user-images.githubusercontent.com/70908908/168911080-eaa1e711-fc55-4498-a2c3-3c98f2097020.png)
 
 (En desarrollo) Power-ups: En partidas clásicas se dispondran de power-ups obtenidos en la tienda para ayudar un poco en partidas que se vean complicadas.
 
 (Funcional) Configuraciones: Poder cambiar el idioma de las instrucciones / botones y palabra a descubrir, además de un manejador de volumen.
+
 ![image](https://user-images.githubusercontent.com/70908908/168911141-1ef76dfe-bf9c-4897-acfb-f71821eee3fb.png)
