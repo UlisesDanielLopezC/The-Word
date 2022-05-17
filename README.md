@@ -25,12 +25,20 @@ El despliegue en Heroku se logra creando un repositorio en heroku y subiendo tod
 ![image](https://user-images.githubusercontent.com/70908908/168910732-ccc3b875-d0f1-4480-a87a-e51a9fa18e93.png)
 
 (Funcional) Clasico: Partidas clásicas de Wordle donde se tiene que encontrar la palabra oculta, teniendo monedas por recompensa que se pueden usar en la tienda.
+
 (En desarrollo) Versus: Partidas clásicas de Wordle donde dos o mas jugadores tienen que encontrar la misma palabra de manera independiente, obteniendo puntos en un leaderboard para al final determinar quien fue el mejor jugador.
+
 (En desarrollo) Co-op: Partidas donde el escenario toma diversas formas de mapa y los jugadores disponen de diferentes espacios para jugar, como si fuese un crucigrama, las intersecciones que sean adivinidas por un jugador podrán ayudar a otros jugadores hasta que se complete el mapa.
 
 # Modificadores
 (En desarrollo) Teclado: Se debe poder alternar entre el teclado QWERTY, QWERTZ y AZERTY para comodidad de jugadores de otros paises.
+
 (En desarrollo) Tienda: Se debe disponer de una tienda donde se puedan usar las monedas ganadas en las partidas clásicas para la compra de temas o power-ups.
+
 (Funcional) Temas: Se debe poder tener un menu para personalizar el tema (set de colores) que quieras visualizar en tu pantalla de juego.
+![image](https://user-images.githubusercontent.com/70908908/168911080-eaa1e711-fc55-4498-a2c3-3c98f2097020.png)
+
 (En desarrollo) Power-ups: En partidas clásicas se dispondran de power-ups obtenidos en la tienda para ayudar un poco en partidas que se vean complicadas.
+
 (Funcional) Configuraciones: Poder cambiar el idioma de las instrucciones / botones y palabra a descubrir, además de un manejador de volumen.
+![image](https://user-images.githubusercontent.com/70908908/168911141-1ef76dfe-bf9c-4897-acfb-f71821eee3fb.png)
