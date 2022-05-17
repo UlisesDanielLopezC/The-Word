@@ -6,16 +6,8 @@
   "scripts": {
     "start": "node main.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UlisesDanielLopezC/The-Word.git"
-  },
   "author": "FUM",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/UlisesDanielLopezC/The-Word/issues"
-  },
-  "homepage": "https://github.com/UlisesDanielLopezC/The-Word#readme",
   "dependencies": {
     "express": "^4.18.0",
     "socket.io": "^4.5.0"

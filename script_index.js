@@ -9,31 +9,31 @@ const gm_coop = document.querySelector('#gcoop');
 //Recuperación de lenguaje
 var lenguaje = localStorage.getItem('lang')
 if(lenguaje !== null){
-    console.log(lenguaje)
+    //console.log(lenguaje)
     selectLang.value = lenguaje;
 }else{
-    console.log('ES NULO')
+    //console.log('ES NULO')
     localStorage.setItem('lang', 'engV')
 }
 
 //Recuperación de cantidad de monedas
 var monedas = localStorage.getItem('coins')
 if(monedas !== null){
-    console.log(monedas)
+    //console.log(monedas)
     document.getElementById("coins").textContent = 'x' + monedas
 }else{
-    console.log('ES NULO')
+    //console.log('ES NULO')
     localStorage.setItem('coins', 0)
 }
 
 //Recuperación de tema seleccionado
 var tema = localStorage.getItem('tema')
 if(tema !== null){
-    console.log(tema)
+    //console.log(tema)
     selectTheme.value = tema;
     document.body.style.backgroundImage="url('/themes/" + tema + "/" + tema + ".gif')";
 }else{
-    console.log('ES NULO')
+    //console.log('ES NULO')
     localStorage.setItem('tema', 'Forest-Gray')
 }
 
@@ -57,7 +57,7 @@ function to_classic(){
     deact_versus();
     deact_coop();
     document.getElementById("enterClick").href="/g_classic.html";
-    console.log('classic');
+    //console.log('classic');
 };
 function to_versus(){
     document.getElementById("gversus").src="/images/Button_Versus_Active.gif";
@@ -65,7 +65,7 @@ function to_versus(){
     deact_classic();
     deact_coop();
     document.getElementById("enterClick").href="/";
-    console.log('versus');
+    //console.log('versus');
 };
 function to_coop(){
     document.getElementById("gcoop").src="/images/Button_Coop_Active.gif";
@@ -73,7 +73,7 @@ function to_coop(){
     deact_classic();
     deact_versus();
     document.getElementById("enterClick").href="/";
-    console.log('cooperative');
+    //console.log('cooperative');
 };
 
 gm_classic.addEventListener("click", to_classic);
@@ -82,11 +82,11 @@ gm_coop.addEventListener("click", to_coop)
 
 selectTheme.addEventListener('change', (event) => {
     document.body.style.backgroundImage="url('/themes/" + event.target.value + "/" + event.target.value + ".gif')";
-    console.log(event.target.value)
+    //console.log(event.target.value)
     localStorage.setItem('tema', event.target.value)
 });
 
 selectLang.addEventListener('change', (event) => {
-    console.log(event.target.value)
+    //console.log(event.target.value)
     localStorage.setItem('lang', event.target.value)
 });

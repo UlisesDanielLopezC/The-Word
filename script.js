@@ -40,7 +40,7 @@ let letraSig = 0;
 let longPalabra = 5;
 let palabraCorrecta = LANG[Math.floor(Math.random() * LANG.length)]
 
-console.log(palabraCorrecta)
+//console.log(palabraCorrecta)
 
 //Recuperación de monedas
 let coins = localStorage.getItem('coins');
