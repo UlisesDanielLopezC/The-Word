@@ -18,7 +18,10 @@ Descargar y descomprimir "wordelta.zip", encontrando dentro "wordelta.exe"
 ![image](https://user-images.githubusercontent.com/70908908/168910529-5e3a1601-976d-4754-a88c-45abc464f865.png)
 
 # Despliegues (Localmente / Heroku)
+En todos los casos se debe descargar o clonar este repositorio (donde no se involucra al comprimido que contiene el ejecutable).
+
 El despliegue local se logra simplemente corriendo el comando "node main.js" mientras el proyecto sea reconocido como un proyecto de node.js.
+
 El despliegue en Heroku se logra creando un repositorio en heroku y subiendo todos los archivos contenidos en este repositorio, para luego hacer deploy y asi acceder a la página funcional.
 
 # Modalidades
